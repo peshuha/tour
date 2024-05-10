@@ -1,0 +1,29 @@
+<p-table
+  [value]="(dt)!"
+  [columnResizeMode]='"expand"'
+  [scrollable]="true"
+  scrollHeight="500px"
+  [columns]=""
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>phone</th>
+      <th>street</th>
+      <th>company</th>
+      <th>city</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-us>
+    <tr>
+      <td>{{ us.id }}</td>
+      <td>{{ us.name }}</td>
+      <td>{{ us.phone }}</td>
+      <td>{{ us.street }}</td>
+      <td>{{ us.company }}</td>
+      <td>{{ us.city }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+

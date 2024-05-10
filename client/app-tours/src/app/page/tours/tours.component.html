@@ -1,0 +1,17 @@
+  <header class="">
+      <sb-header [mnuType]="mnuType" (OnSearch)="OnSearchChange($event)" ></sb-header>
+  </header>
+  <div class="content">
+
+    <div class="tours-list">
+      <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="is_aside" class="aside">
+      <sb-aside [mnuType]="mnuType" (mnuChanged)="OnMenuTypeSelect($event)" ></sb-aside>
+    </div>
+  </div>
+  <footer>
+    <sb-footer></sb-footer>
+  </footer>
+
+

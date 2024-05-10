@@ -1,0 +1,26 @@
+<p-treeTable
+  [value]="(dt$ | async)!"
+  styleClass="p-treetable-gridlines"
+  [scrollable]="true"
+  scrollHeight="500px"
+  [columns]=""
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Название</th>
+      <th>Оператор</th>
+      <th>Тип</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+    <tr [ttRow]="rowNode">
+      <td>
+        <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+        {{ rowData.name }}
+      </td>
+      <td>{{ rowData.tourOperator }}</td>
+      <td>{{ rowData.type }}</td>
+    </tr>
+  </ng-template>
+</p-treeTable>
+

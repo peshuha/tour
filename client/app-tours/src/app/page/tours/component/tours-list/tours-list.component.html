@@ -1,0 +1,42 @@
+<ng-template [ngIf]="!tours" [ngIfElse]="page">
+  <p>In loading...</p>
+</ng-template>
+<ng-template #page>
+  <div class="panel">
+    <p>Всего элементов: {{ddir.GetCountOfItems()}}, Текущий: {{ddir.GetItemNumber()}}</p>
+    <div class="navigator">
+      <button (click)="ddir.NavigateLeft()"><</button>
+      <button (click)="ddir.NavigateUp()">^</button>
+      <button (click)="ddir.NavigateRight()">></button>
+      <button (click)="ddir.NavigateDown()">v</button>
+     </div>
+  </div>
+  <div
+    appItemsSelector
+    [itemsclass]="'tour'"
+    [toggleclass]="'active'"
+    [activator]="elActivator"
+    [itemid]="'itemid'"
+    [initindex]="true"
+
+    #ddir="appItemsSelector"
+    #diSelector
+    #info
+    class="container"
+  >
+    <div
+      *ngFor="let tour of tours | tours: (tourFilter | async)"
+
+      (dblclick)="OnDoubleClick(tour)"
+      [attr.itemid]="tour.id"
+      class="tour"
+    >
+      <p>{{tour.name}}</p>
+      <img src="/assets/img/{{tour.img}}" alt="" height="150px" width="200px">
+    </div>
+  </div>
+
+</ng-template>
+
+
+

@@ -1,0 +1,28 @@
+<div class="selectors">
+  <p-dropdown class="menu"
+    [options]="menuType"
+    [(ngModel)]="mnuType"
+    [optionLabel]="'label'"
+    [optionValue]="'type'"
+    (onChange)="OnChangeMenuType($event)"
+
+  ></p-dropdown>
+
+  <p-dropdown class="menu"
+              [options]="menuTourType"
+              [(ngModel)]="filterTour.type"
+              [optionLabel]="'label'"
+              [optionValue]="'type'"
+              (onChange)="OnChangeTourType($event)"
+
+  ></p-dropdown>
+
+  <p-calendar
+    placeholder="Дата тура..."
+    [(ngModel)]="filterTour.date"
+    (onSelect)="OnSelectDate($event)"
+  ></p-calendar>
+
+  <button (click)="OnTestError()">TestError</button>
+</div>
+

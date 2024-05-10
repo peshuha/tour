@@ -1,0 +1,27 @@
+<div class="mb-3 row col-4">
+  <label for="2f632fd9" class="col-sm-2 col-form-label">Login</label>
+  <div class="col-sm-10">
+    <input type="text" [(ngModel)]="login" [ngClass]="{'necessary': !login}" class="form-control" id="2f632fd9">
+  </div>
+</div>
+<div class="mb-3 row col-4">
+  <label for="9dac07b2" class="col-sm-2 col-form-label">Password</label>
+  <div class="col-sm-10">
+    <input type="password" [(ngModel)]="password" [ngClass]="{'necessary': !password}" class="form-control" id="9dac07b2">
+  </div>
+</div>
+<div class="mb-3 row col-4">
+  <label for="c318d652" class="col-sm-2 col-form-label">EMail</label>
+  <div class="col-sm-10">
+    <input type="password" [(ngModel)]="email" class="form-control" id="c318d652">
+  </div>
+</div>
+<div class="form-check">
+  <label class="form-check-label" for="958f5952">
+    Сохранить данные о входе
+  </label>
+  <input  type="checkbox"[(ngModel)]="save"class="form-check-input"  value="" id="958f5952">
+</div>
+
+<button class="btn btn-success px-4" (click)="OnRegister()">Register</button>
+<p>{{error_message}}</p>

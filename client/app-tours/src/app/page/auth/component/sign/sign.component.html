@@ -1,0 +1,33 @@
+<div class="mb-3 row col-4">
+    <label for="3af1e970" class="col-sm-2 col-form-label">Login</label>
+    <div class="col-sm-10">
+        <input type="text" [(ngModel)]="login" class="form-control" id="3af1e970">
+    </div>
+</div>
+<div class="mb-3 row col-4">
+    <label for="37b24e64" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+        <input type="password" [(ngModel)]="password" class="form-control" id="37b24e64">
+    </div>
+</div>
+<div class="mb-3 row col-4">
+  <div class="col-sm-10">
+    <input type="checkbox" [(ngModel)]="save_login" id="">
+  </div>
+  <label for="" class="col-sm-4 col-form-label">Сохранить логин</label>
+</div>
+<!--<div class="mb-3 row col-4">-->
+<!--  <label for="744732b4" class="col-sm-2 col-form-label">VIP</label>-->
+<!--  <div class="col-sm-10">-->
+<!--    <input type="checkbox" [(ngModel)]="has_card" id="744732b4">-->
+<!--  </div>-->
+<!--</div>-->
+<div *ngIf="has_card" class="mb-3 row col-4">
+  <label for="a7fe92fb" class="col-sm-2 col-form-label">VIP Card</label>
+  <div class="col-sm-10">
+    <input type="text" [(ngModel)]="card" class="form-control" id="a7fe92fb">
+  </div>
+</div>
+
+<button class="btn btn-success px-4" (click)="OnClick()" >Sign</button>
+<p>{{error_message}}</p>

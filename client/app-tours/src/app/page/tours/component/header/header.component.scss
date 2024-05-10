@@ -1,0 +1,16 @@
+:host {
+  height: 100%;
+  width: 100%;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+}
+.timer {
+  min-width: 70px;
+  width: 70px;
+}
+input {
+  margin-right: 40px;
+  min-width: 400px;
+}

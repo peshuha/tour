@@ -1,0 +1,16 @@
+.p-menubar .p-menuitem > .p-menuitem-content .p-menuitem-link {
+  padding: 0.15rem 1.15rem 0.15rem 0.15rem;
+  margin: auto;
+}
+.p-menubar {
+  padding: 0;
+  min-height: 100%;
+}
+* .p-inputtext{
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}

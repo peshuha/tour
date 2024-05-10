@@ -1,0 +1,33 @@
+<form [formGroup]="form">
+
+  <div class="row col-6">
+    <div class="row">
+      <label for="8eb15642" class="col-6">Имя</label>
+      <input type="text" class="col-6 mb-3" id="8eb15642" formControlName="name">
+    </div>
+    <div class="row">
+      <label for="a5a7d9ab" class="col-6">Фамилия</label>
+      <input type="text" class="col-6 mb-3" id="a5a7d9ab" formControlName="last_name">
+    </div>
+    <div class="row">
+      <label for="493b0267" class="col-6">Номер карты</label>
+      <input type="text" class="col-6 mb-3" id="493b0267" formControlName="card">
+    </div>
+    <div class="row">
+      <label for="25677031" class="col-6">Возраст</label>
+      <input type="number" class="col-6 mb-3" id="25677031" formControlName="age">
+    </div>
+    <div class="row">
+      <label for="173c225c" class="col-6">Дата рождения</label>
+      <input type="date" class="col-6 mb-3" id="173c225c" formControlName="birthday">
+    </div>
+    <div class="row">
+      <label for="66a50ce1" class="col-6">Город</label>
+      <input type="text" class="col-6 mb-3" id="66a50ce1" formControlName="city">
+    </div>
+    <div class="row">
+      <button class="mb-3 col-3 btn btn-success" (click)="OnSave()">Сохранить</button>
+    </div>
+  </div>
+
+</form>

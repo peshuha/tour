@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@tour/lib-auth": ["client/lib-auth/src/index.ts"],
+      "@tour/lib-common": ["client/lib-common/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

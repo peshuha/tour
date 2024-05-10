@@ -1,0 +1,9 @@
+<p-menubar [model]="items" >
+  <ng-template pTemplate="end">
+    <div class="info">
+      <input type="text" *ngIf="is_search" (keyup)="OnSearchChange($event)">
+      <div class="me-3" >Hello, {{login}}!</div>
+      <div class="me-3 timer">{{dtNow |date : 'HH:mm:ss'}}</div>
+    </div>
+  </ng-template>
+</p-menubar>
